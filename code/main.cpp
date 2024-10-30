@@ -46,6 +46,7 @@ void createNode(List* list, int n) {
 
 void listDisplay(List* list) {
     Node* node = list->firstNode;
+    cout << "Da thuc: \n";
     while (node != 0) {
         cout << node->heSo << "x^" << node->soMu;
         if (node->next != 0) {
@@ -62,7 +63,7 @@ int main(){
     cout << "Nhap bac cua da thuc: "; cin >> n;
     List list;
     listInit(&list);
-    createNode(&list, n);
+    createNode(&list, n + 1);
     listDisplay(&list);
     return 0;
 }
